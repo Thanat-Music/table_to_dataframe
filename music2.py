@@ -49,19 +49,19 @@ if (len(contours) > 0):
             x, y, w, h = cv2.boundingRect(con)
             if areas_con < 11000 and areas_con > 3000:
                   print("index : {0} ==> area_con = {1}".format(i, areas_con))
-                  if (y>55) and (y<126):
+                  if (y>68) and (y<156):
                         #cv2.rectangle(img, (x, y), (x+w, y+h), (0, 0, 255), 2)
                         keep_monday.append(x)
                         keep_box_monday.append((x, y, w, h))
-                  elif (y>126) and (y<197):
+                  elif (y>156) and (y<244):
                         #cv2.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 2)
                         keep_tuesday.append(x)
                         keep_box_tuesday.append((x, y, w, h))
-                  elif (y>197) and (y<268):
+                  elif (y>244) and (y<332):
                         #cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
                         keep_wednesday.append(x)
                         keep_box_wednesday.append((x, y, w, h))
-                  elif (y>268) and (y<339):
+                  elif (y>332) and (y<420):
                         #cv2.rectangle(img, (x, y), (x+w, y+h), (0, 255, 255), 2)
                         keep_thursday.append(x)
                         keep_box_thursday.append((x, y, w, h))
